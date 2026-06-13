@@ -1,4 +1,5 @@
-import { Control, Controller, FieldValues } from "react-hook-form";
+import { Control, Controller, FieldValues, Path } from "react-hook-form";
+
 import {
   KeyboardTypeOptions,
   StyleProp,
@@ -8,11 +9,12 @@ import {
   TextStyle,
   View,
 } from "react-native";
+
 import { colors } from "../../constants/colors";
 
-interface InputProps {
-  name: string;
-  control: Control<FieldValues>;
+interface InputProps<T extends FieldValues> {
+  name: Path<T>;
+  control: Control<T>;
   placeholder?: string;
   rules?: object;
   error?: string;
@@ -20,7 +22,7 @@ interface InputProps {
   defaultValue?: string;
 }
 
-export function Input({
+export function Input<T extends FieldValues>({
   name,
   control,
   placeholder,
@@ -28,7 +30,7 @@ export function Input({
   error,
   keyboardType,
   defaultValue = "",
-}: InputProps) {
+}: InputProps<T>) {
   return (
     <View style={styles.container}>
       <Controller
@@ -38,12 +40,7 @@ export function Input({
         defaultValue={defaultValue}
         render={({ field: { onChange, onBlur, value } }) => (
           <TextInput
-            style={
-              [
-                styles.input,
-                error ? styles.inputError : null,
-              ] as StyleProp<TextStyle>
-            }
+            style={[styles.input, error ? styles.inputError : null]}
             placeholder={placeholder}
             onBlur={onBlur}
             value={String(value || "")}
@@ -52,6 +49,7 @@ export function Input({
           />
         )}
       />
+
       {error && <Text style={styles.errorText}>{error}</Text>}
     </View>
   );

@@ -27,9 +27,15 @@ export default function Nutrition() {
     queryKey: ["nutrition"],
     queryFn: async () => {
       try {
-        if (!user) {
-          throw new Error("Filed load nutrition");
-        }
+        console.log("ENVIANDO DADOS:", {
+          name: user.name,
+          age: user.age,
+          gender: user.gender,
+          height: user.height,
+          weight: user.weight,
+          objective: user.objective,
+          level: user.level,
+        });
 
         const response = await api.post<ResponseData>("/create", {
           name: user.name,
@@ -41,9 +47,15 @@ export default function Nutrition() {
           level: user.level,
         });
 
+        console.log("RESPOSTA API:", response.data);
+
         return response.data.data;
-      } catch (err) {
-        console.log(err);
+      } catch (error: any) {
+        console.log("ERRO COMPLETO:", error?.response?.data);
+        console.log("STATUS:", error?.response?.status);
+        console.log("MENSAGEM:", error?.message);
+
+        throw error;
       }
     },
   });
@@ -58,7 +70,7 @@ export default function Nutrition() {
         (item) =>
           `\n- Nome: ${item.name}\n- Horário: ${
             item.horario
-          }\n- Alimentos: ${item.alimentos.map((alimento) => ` ${alimento}`)}`
+          }\n- Alimentos: ${item.alimentos.map((alimento) => ` ${alimento}`)}`,
       )}`;
 
       const message = `Dieta: ${data?.nome} - Objetivo: ${data?.objetivo}\n\n${foods}\n\n- Dica Suplemento: ${supplements}`;

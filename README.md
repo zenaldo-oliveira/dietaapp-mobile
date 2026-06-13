@@ -1,50 +1,249 @@
-# Welcome to your Expo app 👋
+# 🥗 Dieta IA - Mobile App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo mobile desenvolvido com **React Native, Expo e Inteligência Artificial (Gemini AI)** para gerar dietas personalizadas com base nos dados informados pelo usuário.
 
-## Get started
+O sistema utiliza uma API própria desenvolvida com **Fastify** e integrada à **Gemini AI**, permitindo a criação automática de planos alimentares personalizados de forma rápida e intuitiva.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🚀 Tecnologias Utilizadas
 
-2. Start the app
+### Mobile
 
-   ```bash
-    npx expo start
-   ```
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+- React Query
+- Zustand
+- Axios
 
-In the output, you'll find options to open the app in a
+### Backend
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Node.js
+- Fastify
+- TypeScript
+- Railway
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Inteligência Artificial
 
-## Get a fresh project
+- Gemini AI (Google)
 
-When you're ready, run:
+---
+
+## 📱 Funcionalidades
+
+✅ Cadastro de informações físicas
+
+✅ Geração automática de dietas com IA
+
+✅ Sugestão de suplementação
+
+✅ Compartilhamento da dieta
+
+✅ Integração com API REST
+
+✅ Interface responsiva
+
+✅ Gerenciamento de estado com Zustand
+
+✅ Backend hospedado na nuvem
+
+✅ Integração com Inteligência Artificial Gemini
+
+---
+
+## 📥 Download do Aplicativo
+
+📱 Instale o APK Android:
+
+https://expo.dev/accounts/zenaldo/projects/Dieta-mobile/builds/95262f1b-a2c4-4227-8709-fa5574c90d8d
+
+### QR Code para instalação
+
+<p align="center">
+ <img
+  src="./assets/images/qrcode.png"
+  alt="QR Code Dieta IA"
+  width="250"
+/>
+</p>
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Tela Inicial
+
+![Tela Inicial](./assets/images/tela-inicial.jpeg)
+
+---
+
+### 📝 Formulário
+
+![Formulário](./assets/images/formulario-preenchido.jpeg)
+
+---
+
+### ✍️ Formulário Preenchido
+
+![Formulário Preenchido](./assets/images/formulario-preenchido.jpeg)
+
+---
+
+### 📋 Continuação do Formulário
+
+![Formulário 2](./assets/images/formulario-2.jpeg)
+
+---
+
+### 🤖 Gerando Dieta com Inteligência Artificial
+
+![Gerando Dieta](./assets/images/gerando-dieta.jpeg)
+
+---
+
+### 🥗 Resultado da Dieta Personalizada
+
+![Resultado da Dieta](./assets/images/resultado-dieta.jpeg)
+
+---
+
+## 📂 Estrutura do Projeto
 
 ```bash
-npm run reset-project
+app/
+components/
+services/
+store/
+assets/
+constants/
+types/
+scripts/
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## ⚙️ Instalação
 
-To learn more about developing your project with Expo, look at the following resources:
+Clone o repositório:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+git clone https://github.com/zenaldo-oliveira/dieta-mobile.git
+```
 
-## Join the community
+Acesse a pasta do projeto:
 
-Join our community of developers creating universal apps.
+```bash
+cd dieta-mobile
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o projeto:
+
+```bash
+npx expo start
+```
+
+Ou execute diretamente no Android:
+
+```bash
+npm run android
+```
+
+---
+
+## 🔗 Backend
+
+API hospedada no Railway:
+
+https://dieta-app-beckend-production.up.railway.app
+
+Repositório Backend:
+
+https://github.com/zenaldo-oliveira/dieta-app-beckend
+
+---
+
+## 🧠 Inteligência Artificial
+
+O aplicativo utiliza a Gemini AI para gerar planos alimentares personalizados com base nos seguintes dados:
+
+- Nome
+- Sexo
+- Peso
+- Altura
+- Idade
+- Objetivo
+- Nível de atividade física
+
+A IA retorna:
+
+- Plano alimentar completo
+- Horários das refeições
+- Sugestão de alimentos
+- Recomendação de suplementos
+
+---
+
+## 🌐 Links
+
+### 🚀 Portfólio
+
+https://zenaldodev.com.br
+
+### 💻 GitHub
+
+https://github.com/zenaldo-oliveira
+
+### 📱 Aplicativo
+
+https://expo.dev/accounts/zenaldo/projects/Dieta-mobile/builds/95262f1b-a2c4-4227-8709-fa5574c90d8d
+
+---
+
+## 👨‍💻 Desenvolvedor
+
+### Zenaldo Pereira de Oliveira
+
+Desenvolvedor Full Stack especializado em:
+
+- React
+- Next.js
+- React Native
+- Node.js
+- TypeScript
+- APIs REST
+- Inteligência Artificial
+
+🌎 Portfólio:
+https://zenaldodev.com.br
+
+📧 Contato:
+zenaldo_18@hotmail.com
+
+🐙 GitHub:
+https://github.com/zenaldo-oliveira
+
+---
+
+## ⭐ Apoie o Projeto
+
+Se este projeto foi útil para você:
+
+⭐ Deixe uma estrela no repositório.
+
+🚀 Compartilhe com outros desenvolvedores.
+
+💙 Contribuições são bem-vindas.
+
+---
+
+### Licença
+
+Este projeto está sob a licença MIT.

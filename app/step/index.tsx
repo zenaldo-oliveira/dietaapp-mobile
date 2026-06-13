@@ -31,7 +31,7 @@ export default function Step() {
     resolver: zodResolver(schema)
   })
 
-  const setPageOne = useDataStore(state => state.setPageOne) 
+  const setPageOne = useDataStore(state => state.setPageOne)
 
   function handleCreate(data: FormData){
     console.log("PASSANDO DADOS PARA OUTRA PAGINA 1");
